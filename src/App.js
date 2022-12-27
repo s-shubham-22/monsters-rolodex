@@ -11,13 +11,21 @@ class App extends Component {
         }
     }
 
+    changeName = () => {
+        this.setState({
+            name: 'Kalpit',
+        })
+    }
+
     render() {
         return (
             <div className='App'>
                 <header className='App-header'>
                     <img src={logo} className='App-logo' alt='logo' />
                     <p>Hello {this.state.name}</p>
-                    <butto>Change Name</butto>
+                    <button type='button' onClick={this.changeName}>
+                        Change Name
+                    </button>
                 </header>
             </div>
         )
